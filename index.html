@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jhonatan Rios">
+    <meta name="description" content="WDD 231 - Web Fronted Development I, Jhonatan Rios">    
+    <title>WDD 231 - Web Frontend Development I - Jhonatan Rios</title>
+    <link rel="stylesheet" href="/styles/large-base.css">
+    <link rel="stylesheet" href="/styles/base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="/scripts/date.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/jhonatanrios.jpg" alt="jhonatan-rios photo">
+        <h1>Jhonatan Rios </h1>
+        <nav>
+            <div class="menu-toggle">
+                <input type="checkbox" id="menu-toggle-checkbox">
+                <label for="menu-toggle-checkbox" class="menu-icon" arial-label="Toggle menu">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>                    
+                </label>            
+                <ul class="menu"> 
+                    <li ><a href="" id="x-close">X</a></li>                
+                    <li><a href="index.html" target="_blank">Home</a></li>
+                    <li><a href="#" target="_blank">Chamber</a></li>
+                    <li><a href="https://github.com/natanri" target="_blank">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/jhonatan-rios/" target="_blank">LinkedIn</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="course">
+            <h2>Course Work</h2>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+        <section class="country">
+            <h2>Bogota, Colombia</h2>
+            <img src="/images/bogota night.jpg" alt="photo-take-by-hector-orjuela-picture_of_bogota">
+            <p>Downtown</p>
+        </section>
+        <section class="certificates">
+            <h2>Web and Computer Programming Certificate</h2>
+                    
+            <button class="filter-button" data-filter="all">All</button>
+            <button class="filter-button" data-filter="CSE">CSE</button>
+            <button class="filter-button" data-filter="WDD">WDD</button>            
+            <hr>
+            <div id="courses-container"></div>
+            <div id="total-credits"></div>
+            <ul class="container">
+                <li>CSE 110</li>
+                <li>WDD 130</li>
+                <li>CSE 111</li>
+                <li>CSE 210</li>
+                <li>WDD 131</li>
+                <li>WDD 231</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div>&copy; <span id="currentyear"></span>&#127756 Jhonatan Rios &#127756 </div>
+            <div id="flag"><h4>Colombia</h4> <img src="/images/flag.png" alt="Colombia flag"></div>
+        </div>
+        <div class="lastModified">Last Modification: <span id="lastModified"></span></div>
+    </footer>    
+</body>
+</html>
