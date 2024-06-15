@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 :root{
     --main-color: #2E4272;
     --text-color: #7887AB;
@@ -204,9 +206,9 @@
     }
     .course-card.completed {
         
-        background-color: var(--text-color);
+        background-color: var(--hover-color);
         border-color: var(--text-color);
-        color:var(--text-color2)
+        color:var(--text-color2);
     }
     .filter-button {
         margin: 5px;
