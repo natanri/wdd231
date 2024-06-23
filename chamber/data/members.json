@@ -12,7 +12,7 @@
             }
         ],
         "SocialMedia": "Facebook, X, Threads, Instagram",
-        "imageURL": "/images/bancolombi.webp"
+        "imageURL": "images/bancolombi.webp"
     },
     {
         "name": "Ecopetrol",
@@ -27,7 +27,7 @@
             }
         ],
         "SocialMedia": "Facebook, X, Threads, Instagram",
-        "imageURL": "/images/Ecopetrol.webp"
+        "imageURL": "images/Ecopetrol.webp"
     },
     {
         "name": "Grupo Aval",
@@ -42,7 +42,7 @@
             }
         ],
         "SocialMedia": "Facebook, X, Threads, Instagram",
-        "imageURL": "/images/grupo-aval.webp"
+        "imageURL": "images/grupo-aval.webp"
     },
     {
         "name": "Grupo Éxito",
@@ -57,7 +57,7 @@
             }
         ],
         "SocialMedia": "Facebook, X, Threads, Instagram",
-        "imageURL": "/images/grupo_exito.webp"
+        "imageURL": "images/grupo_exito.webp"
     },
     {
         "name": "Cementos Argos",
@@ -72,7 +72,7 @@
             }
         ],
         "SocialMedia": "Facebook, X, Threads, Instagram",
-        "imageURL": "/images/cemento_argos.webp"
+        "imageURL": "images/cemento_argos.webp"
     },
     {
         "name": "Avianca",
@@ -87,7 +87,7 @@
             }
         ],
         "SocialMedia": "Facebook, X, Threads, Instagram",
-        "imageURL": "/images/avianca.webp"
+        "imageURL": "images/avianca.webp"
     },
     {
         "name": "Almacenes Olímpica",
@@ -102,6 +102,6 @@
             }
         ],
         "SocialMedia": "Facebook, X, Threads, Instagram",
-        "imageURL": "/images/Olímpica.webp"
+        "imageURL": "images/Olímpica.webp"
     }
 ]
