@@ -1,0 +1,107 @@
+[
+    {
+        "name": "Bancolombia",
+        "addresses": "Cra. 48 #26-85, Medellín, Antioquia",
+        "phoneNumbers": {"main": "+57 604 5109000"},
+        "websiteURLs": "https://www.grupobancolombia.com",
+        "membership_level": [
+            {
+                "level1": "member",
+                "level2": "silver",
+                "level3": "gold"
+            }
+        ],
+        "SocialMedia": "Facebook, X, Threads, Instagram",
+        "imageURL": "/images/bancolombi.webp"
+    },
+    {
+        "name": "Ecopetrol",
+        "addresses": "Cra. 13 #36-24, Bogotá, D.C.",
+        "phoneNumbers": {"main": "+57 601 2345000"},
+        "websiteURLs": "https://www.ecopetrol.com.co",
+        "membership_level": [
+            {
+                "level1": "member",
+                "level2": "silver",
+                "level3": "gold"
+            }
+        ],
+        "SocialMedia": "Facebook, X, Threads, Instagram",
+        "imageURL": "/images/Ecopetrol.webp"
+    },
+    {
+        "name": "Grupo Aval",
+        "addresses": "Cra. 13 #26-45, Bogotá, D.C.",
+        "phoneNumbers": {"main": "+57 601 2419700"},
+        "websiteURLs": "https://www.grupoaval.com",
+        "membership_level": [
+            {
+                "level1": "member",
+                "level2": "silver",
+                "level3": "gold"
+            }
+        ],
+        "SocialMedia": "Facebook, X, Threads, Instagram",
+        "imageURL": "/images/grupo-aval.webp"
+    },
+    {
+        "name": "Grupo Éxito",
+        "addresses": "Cra. 48 #32B Sur-139, Envigado, Antioquia",
+        "phoneNumbers": {"main": "+57 604 3396565"},
+        "websiteURLs": "https://www.grupoexito.com.co",
+        "membership_level": [
+            {
+                "level1": "member",
+                "level2": "silver",
+                "level3": "gold"
+            }
+        ],
+        "SocialMedia": "Facebook, X, Threads, Instagram",
+        "imageURL": "/images/grupo_exito.webp"
+    },
+    {
+        "name": "Cementos Argos",
+        "addresses": "Cra. 43A #1A Sur-143, Medellín, Antioquia",
+        "phoneNumbers": {"main": "+57 604 3198700"},
+        "websiteURLs": "https://www.argos.co",
+        "membership_level": [
+            {
+                "level1": "member",
+                "level2": "silver",
+                "level3": "gold"
+            }
+        ],
+        "SocialMedia": "Facebook, X, Threads, Instagram",
+        "imageURL": "/images/cemento_argos.webp"
+    },
+    {
+        "name": "Avianca",
+        "addresses": "Av. Calle 26 #59-15, Bogotá, D.C.",
+        "phoneNumbers": {"main": "+57 601 4013434"},
+        "websiteURLs": "https://www.avianca.com",
+        "membership_level": [
+            {
+                "level1": "member",
+                "level2": "silver",
+                "level3": "gold"
+            }
+        ],
+        "SocialMedia": "Facebook, X, Threads, Instagram",
+        "imageURL": "/images/avianca.webp"
+    },
+    {
+        "name": "Almacenes Olímpica",
+        "addresses": "Calle 80 #82-30, Barranquilla, Atlántico",
+        "phoneNumbers": {"main": "+57 605 3856000"},
+        "websiteURLs": "https://www.olimpica.com",
+        "membership_level": [
+            {
+                "level1": "member",
+                "level2": "silver",
+                "level3": "gold"
+            }
+        ],
+        "SocialMedia": "Facebook, X, Threads, Instagram",
+        "imageURL": "/images/Olímpica.webp"
+    }
+]
