@@ -1,4 +1,3 @@
-
 :root{
     --main-color: #2E4272;
     --text-color: #A2BDE7;
@@ -6,27 +5,27 @@
     --link-color: #061539;
     --button-color: #4F628E;
     --hover-color: #162955;
+    --hover-color2: #6a994e;
 }
-@media (max-width: 429px){
-    /***************header****************/
+
+@media (max-width: 429px) {
     h1, h2, li, footer, p, #total-credits, .course-card{
         font-family: 'Roboto', sans-serif;
     }
-
     
-    header img{
-        width: 20%;
-        height: auto;
-        border-radius: 20px;
-        margin: 10px;
-    }
-
     header{
         display: flex;
         width: 100%;
         height: auto;
         background-color: var(--main-color);
-        border-radius: 10px 10px 0 0;
+        border-radius: 10px 10px 0 0 ;
+    }
+
+    header .jrimage{
+        width: 50%;
+        height: auto;
+        border-radius: 20px;
+        margin: 10px;
     }
 
     header h1{        
@@ -34,118 +33,76 @@
         color: var(--text-color2);        
     }
 
+    /**********Menu hamburguer*******************/
 
-    /***********Menu hamburguer***********/
-    .menu-toggle{
-        display: block;
-        cursor: pointer;
-    }
-
-    .menu-toggle input:checked ~ .menu{
+    button{
+        margin-top: 10px;
         display: flex;
+        flex-direction: column;
+        width: 3rem;
+        height: 3rem;
+        background-color: transparent;
+        gap: .65rem;
+        transform-origin: left;
+        border: 0;
+        
     }
 
-    #x-close{
-        display: block;
+    button > div{
+        background-color: var(--text-color2);
+        height: 2px;
+        width: 90%;
+        border-radius: 4px;
+        transition: all .5s;
+        transform-origin: left;
+        
     }
 
-    .menu-toggle input:checked ~ .menu li{
-        margin-left: 0;
-        text-align: center;
+    button:hover div:first-child{        
+        transform: rotate(45deg);
     }
 
-    .menu li:first-child{
-        text-align: right;
-        padding: 10px;
-    }
-
-    .menu li:first-child a{
-        color: var(--link-color);
-        font-size: 1.5em;
-        text-decoration: none;
-    }
-
-    .menu li:first-child a:hover{
-        text-decoration: underline;
-    }
-
-    .menu-icon{
-        display: flex;
-        width:25px;
-        height: 20px;
-        position: relative;
-        cursor: pointer;
-        margin-top: 9px;
-    }
-
-    .menu-icon span{
-        display: block;
-        width: 100%;
-        height: 3px;
-        background-color: #fff;
-        position: absolute;
-        left: -10px;
-        transition: transform 0.2s ease-out;        
-    }
-
-    .menu-icon span:nth-child(2){
-        top: 8px;
-    }
-    
-    .menu-icon span:nth-child(3){
-        top: 16px;
-    }
-
-    #menu-toggle-checked:checked ~ .menu-icon span{
-        transform: rotate(45deg) translateY(8px);
-    }
-    
-    #menu-toggle-checked:checked ~ .menu-icon span{
+    button:hover div:nth-child(2){
         opacity: 0;
     }
-    #menu-toggle-checked:checked ~ .menu-icon span{
-        transform: rotate(-45deg) translateY(-8px);
+
+    button:hover div:last-child{        
+        transform: rotate(-45deg);
     }
 
-    .menu-toggle input{
-        display: none;
-    }
-
-    .menu {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
+    .menu{
         display: none;
         flex-direction: column;
-        background-color: var(--text-color);
         position: absolute;
-        top: 29px;
-        left: 60%;
-        width: 40%;
-        align-items: center;
+        top: 60px;
+        right: 10px;
+        background-color: var(--main-color);
+        width: 30%;
+        
     }
 
-    .menu li {
-        margin: 0;
+    .menu li{
+        list-style: none;  
+        padding: 5px;      
     }
 
     .menu li a{
-        padding: 15px;
-        display: block;
-        color: #fff;
-        text-decoration: none;
-        border-bottom: 1px solid #666 ;
+        color: var(--text-color2);
+        font-size: 1.25rem;
     }
 
-    .menu-toggle input:checked ~ .menu{
+    .menu-toggle .toggle{
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .menu.show{
         display: flex;
     }
 
-    .menu input[type="checkbox"]:checked ~ .menu{
-        display: flex;
-    }
-    /**************Course section***************/
-    .course h2{
+     /**************Course section***************/
+     .course h2{
         background-color: var(--main-color);
         color: var(--text-color2);        
         text-align: center;
@@ -153,13 +110,12 @@
         padding: 10px;
         margin-left: 10px;
         margin-right: 10px;
-
     }
 
     /*****************Show menu******************/  
     main h1{
-    color: var(--link-color);
-    text-align:center;
+        color: var(--link-color);
+        text-align:center;
     }
 
     .showMenu{
@@ -169,7 +125,7 @@
         background-color: var(--main-color);
         text-align: center;
     }
-
+    
     .showMenu button{
         padding: 1rem;
         font-weight: 700;
@@ -283,16 +239,70 @@
         color: var(--hover-color2);
     }
 
+       
+     /**************weather container**************/
+     .hero_image{
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 0;
+        
+    }
+
+    .weather-section{
+        display: grid;
+        gap:10px;
+        
+    }    
+
+    .events li{
+        list-style: none;
+        padding: 5px;
+    }
+
+    .events ul{
+        padding: 0;
+    }    
+
+    .events, .weather-container, .weather-forecast{
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .weather-section section h2{
+        background-color: var(--main-color);
+        color: var(--text-color2);
+        padding: 10px;
+        margin: 0;
+    }
+
+    hr{ 
+        width: 100%;
+       height: 1px;
+    }
+
+    .advertisement{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        text-align: center;        
+    }
+
+    video{        
+        width: 350px;
+        margin-bottom: 10px;
+        margin-left: 8%;
+    }
 
     /**************Country section***************/
     .country h2{
-        background-color: var(--main-color);
-        color: var(--text-color2);        
-        text-align: center;
-        border-radius: 10px 10px 0 0;
-        padding: 10px;
-        margin-left: 10px;
-        margin-right: 10px;
+    background-color: var(--main-color);
+    color: var(--text-color2);        
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
     }
 
     .large-pic{
@@ -304,7 +314,7 @@
         margin-left: 50px;       
         margin-right: 50px;
     }
-    
+
     .country {
         text-align: center;
     }
@@ -316,6 +326,11 @@
     }
 
     /**************Certificates section***************/
+
+    .certificates{
+        text-align: center;
+    }    
+
     .certificates h2 {
         background-color: var(--main-color);
         color: var(--text-color2);        
@@ -333,10 +348,7 @@
         background-color: var(--button-color);
         border-radius: 6px;
         color: var(--text-color2);
-    }
-    
-    .certificates{
-        text-align: center;
+        display: inline-block;
     }
 
     hr{
@@ -376,16 +388,15 @@
         border-color: var(--text-color);
         color:var(--text-color2)
     }
-    
+
     .filter-button {
         margin: 5px;
         padding: 10px;
         cursor: pointer;
         text-align: inherit;
     }
-    
-    /******************Footer************************/
-    footer{
+     /******************Footer************************/
+     footer{
         background-color: var(--main-color);
         color: var(--text-color2);        
         text-align: center;
@@ -414,5 +425,4 @@
         margin-top: 5px;
         margin-bottom: 10px;
     }
-  
 }

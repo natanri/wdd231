@@ -7,39 +7,26 @@ document.addEventListener("DOMContentLoaded", function(){
     lastModifiedElement.textContent = `${today.toLocaleString()}`
 
     
-    const menuToggle = document.querySelector( '.menu-toggle' );
-    const menuCheckbox = document.getElementById('menu-toggle-checkbox');
-    const menu = document.querySelector('.menu');
-    const xClose = document.getElementById('x-close')
-        
+    const toggleButton = document.getElementById( 'toggleButton' );    
+    const menuList = document.getElementById('menuList');    
+     
+    toggleButton.addEventListener('click', function(){
+        menuList.classList.toggle('show');
+    });
 
-    function toggleMenuButton(){
-        if(window.innerWidth < 430) {
-            menuToggle.style.display = "block";
-            menu.style.display = 'none'
+
+    function handleResize(){
+        if(window.innerWidth > 430) {
+            menuList.classList.remove('show');
+            menuList.style.display = 'flex'
             
         }else{
-            menuToggle.style.display = "block";
-            menu.style.display = 'flex'
+            menuList.style.display = 'none';            
         }
     }
 
-    toggleMenuButton();
-    window.addEventListener('resize', toggleMenuButton);
-
-    menuCheckbox.addEventListener('change', function(){
-        if(menuCheckbox.checked){
-            menu.style.display = 'block';
-        } else{
-            menu.style.display = 'none';
-        }
-    });
-
-    xClose.addEventListener('click', function(e){
-        e.preventDefault();
-        menuCheckbox.checked = false;
-        menu.style.display = 'none';
-    });
+    window.addEventListener('resize', handleResize);
+    handleResize()    
 
     const courses = [
         {
@@ -136,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function(){
             <p>${course.description}</p>
             <p><strong>Credits:</strong> ${course.credits}</p>
             <p><strong>Technologies:</strong> ${course.technology.join(', ')}</p>
-        `;
+        `;        
         return courseCard;
     }
 

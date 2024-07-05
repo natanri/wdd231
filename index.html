@@ -20,22 +20,20 @@
 </head>
 <body>
     <header>
-        <img src="images/jhonatanrios.jpg" alt="jhonatan-rios photo">
+        <img class="jrimage" src="images/jhonatanrios.jpg" alt="jhonatan-rios photo">
         <h1>Jhonatan Rios </h1>
         <nav>
             <div class="menu-toggle">
-                <input type="checkbox" id="menu-toggle-checkbox">
-                <label for="menu-toggle-checkbox" class="menu-icon">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>                    
-                </label>            
-                <ul class="menu"> 
-                    <li ><a href="" id="x-close">X</a></li>                
-                    <li><a href="index.html" target="_blank">Home</a></li>
-                    <li><a href="chamber/directory.html" target="_blank">Chamber</a></li>
-                    <li><a href="https://github.com/natanri" target="_blank">GitHub</a></li>
-                    <li><a href="https://www.linkedin.com/in/jhonatan-rios/" target="_blank">LinkedIn</a></li>
+                <button class="toggle" id="toggleButton">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>           
+                <ul class="menu" id="menuList">                                     
+                    <li><a href="chamber/index.html" >Home</a></li>
+                    <li><a href="chamber/directory.html" >Chamber</a></li>
+                    <li><a href="https://github.com/natanri" >GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/jhonatan-rios/" >LinkedIn</a></li>
                 </ul>
             </div>
         </nav>
@@ -60,7 +58,8 @@
                     
             <button class="filter-button" data-filter="all">All</button>
             <button class="filter-button" data-filter="CSE">CSE</button>
-            <button class="filter-button" data-filter="WDD">WDD</button>            
+            <button class="filter-button" data-filter="WDD">WDD</button> 
+
             <hr>
             <div id="courses-container"></div>
             <div id="total-credits"></div>
