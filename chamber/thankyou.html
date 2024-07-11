@@ -10,16 +10,15 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Jhonatan Rios">
-    <meta name="description" content="WDD 231 - Web Fronted Development I, Jhonatan Rios">    
-    <title>WDD 231 - Web Frontend Development I / Chamber of commerce  - Jhonatan Rios</title>
+    <meta name="description" content="WDD 231 - Home Page, Jhonatan Rios">    
+    <title>WDD 231 - Web Frontend Development I / Home Page  - Jhonatan Rios</title>
     <link rel="stylesheet" href="styles/base-chamber.css">
     <link rel="stylesheet" href="styles/large-base-chamber.css">    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="icon" href="images/faviconEA.ico">
-    <script src="data/data.js" defer></script>
-    <script src="data/members.js"></script>
+    
 </head>
 <body>
     <header>        
@@ -30,31 +29,40 @@
                     <div></div>
                     <div></div>
                     <div></div>
-                </button>             
-                <ul class="menu">                                    
+                </button>
+                <ul class="menu" id="menuList">                                    
                     <li><a href="/index.html" >Home</a></li>
                     <li><a href="#" >Discover</a></li>
-                    <li><a href="directory.html" >Directory</a></li>
+                    <li><a href="directory.html" >Directroy</a></li>
                     <li><a href="join-us.html" >Join</a></li>
-                </ul>
+                </ul>                
             </div>
         </nav>
-    </header>    
-    <main class="directory">
-        <h1>Directory</h1>
-        <div class="showMenu">
-            <button id="grid">&#128307;Grid</button>
-            <button id="list"> &#128195;List</button>
-        </div>
-        <hr>        
-        <figure class="container2"></figure>        
-    </main>
+    </header>
+    <div class="container-message" id="thankyouMessage">
+        <h1>Thank You!</h1>
+        <p>We have received your information.</p>
+        <h2>Your Details:</h2>
+        <div><strong>First Name:</strong> <span id="first-name-display"></span></div>
+        <div><strong>Last Name:</strong> <span id="last-name-display"></span></div>
+        <div><strong>Organization Title:</strong> <span id="organization-title-display"></span></div>
+        <div><strong>Email:</strong> <span id="email-display"></span></div>
+        <div><strong>Phone:</strong> <span id="phone-display"></span></div>
+        <div><strong>Organization:</strong> <span id="organization-display"></span></div>
+        <div><strong>Membership Level:</strong> <span id="membership-level-display"></span></div>        
+        <div><strong>Time Stamp:</strong><span id="timestamp-display"></span></div>
+        
+    </div>
+    
+
     <footer>
         <div class="footer-content">
             <div>&copy; <span id="currentyear"></span>&#127756; Jhonatan Rios &#127756; </div>
             <div id="flag"><h4>Colombia</h4> <img src="images/flag.png" alt="Colombia flag"></div>
         </div>
         <div class="lastModified">Last Modification: <span id="lastModified"></span></div>
-    </footer>
+    </footer> 
+    <script src="data/data.js" defer></script>  
+    <script src="data/thankyou.js"></script>
 </body>
 </html>

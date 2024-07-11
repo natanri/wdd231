@@ -16,7 +16,7 @@
 }
 
 @media (min-width: 430px){
-    h1, h2, li, footer, p, #total-credits, .course-card{
+    h1, h2, li, footer, p, #total-credits, .course-card, form{
         font-family: 'Roboto', sans-serif;        
     }
     
@@ -418,6 +418,70 @@
         text-align: justify;
     }
     
+    /***************Form for Join us****************/
+    .container-form{
+        background-color: var(--text-color);
+        padding: 12px;
+        border-radius: 5px;
+        margin: 10px; 
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 20%;
+    }
+
+    .container-form input{
+        width: 100%;
+        font-size: 1rem;
+        padding: .5rem;
+        margin-bottom: 10px;
+    } 
+
+    .container-form #description, #membership-level{
+        margin-bottom: 10px;
+    }
+
+    #membership-level{
+        padding: 10px;
+        width: 100%;
+    }
+    
+    #submit{
+        margin-top: 10px;
+    }
+
+    .container-message{
+        border: 1px solid var(--hover-color);
+        border-radius: 5px;
+        width: 40%;
+        height: auto;
+        display: block;        
+        margin-top: 20px;
+        margin-left: 30%;
+        margin-right: 30%; 
+        margin-bottom: 10px;  
+        text-align: center;     
+    }
+
+    .container-message div{
+        margin: 10px;
+        font-family: 'Roboto', sans-serif;
+        padding: 10px;
+        display: flex;         
+        justify-content:space-between;       
+             
+    }
+
+    /****************Thank you page*****************/
+    .container{
+        max-width: 600px;
+        margin: 50px;
+        padding: 20px;
+        border:1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+
     /***************Footer**************************/
     
     footer{ 

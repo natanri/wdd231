@@ -155,6 +155,6 @@ document.addEventListener("DOMContentLoaded", function(){
         });
     });
 
-    displayCourses('all')
+    displayCourses('')
 
 });

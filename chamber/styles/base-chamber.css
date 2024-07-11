@@ -395,6 +395,40 @@
         cursor: pointer;
         text-align: inherit;
     }
+
+    /***************Form for Join us****************/
+    .container-form{
+        background-color: var(--text-color);
+        padding: 12px;
+        border-radius: 5px;
+        margin: 10px; 
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 20%;
+    }
+
+    .container-form input{
+        width: 100%;
+        font-size: 1rem;
+        padding: .5rem;
+        margin-bottom: 10px;
+    }
+    
+    .container-message div{
+        margin: 10px;
+        font-family: 'Roboto', sans-serif;
+        padding: 5px;               
+    }
+
+    .container-message{
+        border: 1px solid var(--hover-color);
+        border-radius: 5px;
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-top: 20px;  
+        padding: 10px;           
+    }
      /******************Footer************************/
      footer{
         background-color: var(--main-color);
