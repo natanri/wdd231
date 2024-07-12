@@ -157,4 +157,32 @@ document.addEventListener("DOMContentLoaded", function(){
 
     displayCourses('')
 
+    const dialog = document.getElementById('dialog');
+    const dialogContent = document.getElementById('dialogContent');
+    const closeBtn = document.getElementById('closeDialogBtn');
+    const dataContainer = document.getElementById('data-container');
+
+    function showCourseDialog(CourseId){
+        const course = courses.find(c => c.subject + c.number === CourseId);
+        if(course){
+            dialogContent.innerHTML = `
+                <h3>${course.subject} ${course.number}: ${course.title}</h3>
+                <p>${course.description}</p>
+            `;
+            dialog.showModal();
+        }
+    }
+
+    dataContainer.querySelectorAll('li').forEach(li => {
+        li.addEventListener('click', () => {
+            const courseId = li.dataset.courseId;
+            showCourseDialog(courseId);
+        });
+    });
+
+    closeBtn.addEventListener('click', (event) =>{
+        event.preventDefault();        
+        dialog.close();
+    })
+
 });
