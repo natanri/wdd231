@@ -481,6 +481,84 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
+    /***************Discover Page********************/
+    .calendar{
+        text-align: center;
+        width: 300px;
+    }
+    ol {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        padding: 0;
+    }
+
+    .first-day{
+       grid-column-start: 1;
+    }
+
+    .day-name{
+        background-color: var(--button-color);
+        font-weight: bold;
+        color: var(--text-color2);
+        text-align: center;
+    }
+
+    .discover-page{
+        display:grid;  
+        grid: "news discover discover" 
+              "calendar discover discover" 
+              "sidebar discover discover" 1fr
+              / 1fr 1fr 3fr;          
+        gap: 8px;
+        margin: 10px;
+    }
+
+    .news{
+        grid-area: news;
+        height: 660px;
+     }
+    .discover{
+        grid-area: discover;
+        text-align: center;
+     }
+    .calendar{
+        grid-area: calendar;
+        height: 200px;
+     }
+     .sidebar{
+        grid-area: sidebar;
+        height: 200px;
+        
+     }
+
+    .discover img{
+        
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+
+    @keyframes show{
+        from{
+            opacity: 0; scale: 10%;
+        }
+
+        to{
+            opacity: 1; scale: 100%;
+        }
+    }
+
+    .discover img{
+        view-timeline-name: --reveal;
+        animation-name: show;
+        animation-fill-mode: both;
+        animation-timeline: --reveal;
+        animation-range: entry 25% cover 50%;
+    }
+    
+
 
     /***************Footer**************************/
     

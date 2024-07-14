@@ -58,18 +58,6 @@
         
     }
 
-    button:hover div:first-child{        
-        transform: rotate(45deg);
-    }
-
-    button:hover div:nth-child(2){
-        opacity: 0;
-    }
-
-    button:hover div:last-child{        
-        transform: rotate(-45deg);
-    }
-
     .menu{
         display: none;
         flex-direction: column;
@@ -79,6 +67,10 @@
         background-color: var(--main-color);
         width: 30%;
         
+    } 
+    
+    .menu.show{
+        display: flex;
     }
 
     .menu li{
@@ -99,6 +91,18 @@
 
     .menu.show{
         display: flex;
+    }
+
+    button:hover div:first-child{        
+        transform: rotate(45deg);
+    }
+
+    button:hover div:nth-child(2){
+        opacity: 0;
+    }
+
+    button:hover div:last-child{        
+        transform: rotate(-45deg);
     }
 
      /**************Course section***************/
@@ -428,6 +432,63 @@
         display: block;
         margin-top: 20px;  
         padding: 10px;           
+    }
+
+     /***************Discover Page********************/
+    .calendar{
+        text-align: center;
+        width: 100%px;
+    }
+    ol {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        padding: 0;
+    }
+
+    .first-day{
+       grid-column-start: 1;
+    }
+
+    .day-name{
+        background-color: var(--button-color);
+        font-weight: bold;
+        color: var(--text-color2);
+        text-align: center;
+    }
+
+    .discover-page{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .discover{
+        text-align: center;
+    }
+
+    .discover img{        
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+
+    @keyframes show{
+        from{
+            opacity: 0; scale: 10%;
+        }
+
+        to{
+            opacity: 1; scale: 100%;
+        }
+    }
+
+    .discover img{
+        view-timeline-name: --reveal;
+        animation-name: show;
+        animation-fill-mode: both;
+        animation-timeline: --reveal;
+        animation-range: entry 25% cover 50%;
     }
      /******************Footer************************/
      footer{
