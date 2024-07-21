@@ -11,8 +11,7 @@
 
 *{
     box-sizing: border-box;
-    max-width: 100%;
-    
+    max-width: 100%;    
 }
 
 @media (min-width: 430px){

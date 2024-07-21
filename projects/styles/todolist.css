@@ -1,0 +1,357 @@
+:root{
+    --primary-color: #ff5f57d8;
+    --secondary-color: #333;
+    --background: #f4f4f4;
+    --text-color: #333;
+    --accent: #fff ;
+}
+
+*{
+    box-sizing: border-box;
+    max-width: 100%;    
+}
+
+body{
+    background-color: var(--background);
+}
+
+p, .lastModified, li{
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, a, .footer-content, button{
+    font-family: 'Lobster Two', sans;
+}
+
+header{
+    background-color: var(--primary-color);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+}
+
+.top-page img{
+    width: 50%;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.top-page{
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    gap: 8px;
+    justify-items: center;    
+}
+
+.top-page img{
+    grid-column: 1 / span 1;
+}
+
+.top-page h1{
+    grid-column: 2 / span 3;
+}
+
+nav{
+    display: flex;    
+    align-items: flex-end;      
+    margin-left: auto;
+}
+
+nav li a{
+    text-decoration: none;
+    color: black; 
+}
+
+nav li{
+    font-size: 2rem;
+    list-style: none;
+    display: inline;
+    padding: 10px; 
+       
+}
+
+nav li a:hover{
+    color: var(--accent);
+}
+
+
+/*************Intro***********************/
+.intro{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.intro p{
+    font-weight: 100;
+}
+
+.intro > button{
+    margin: 0;
+
+}
+
+/***************************************/
+
+.home, .login, .todolist, .profile, .register{  
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    text-align: center;
+    border: 1px solid var(--secondary-color);
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+    height: 500px;
+    padding: 20px;    
+}
+/*****************button*********************/
+.home button, .login button, .profile button, .register button{    
+    font-size: 2rem;    
+    width: 250px;
+}
+
+.btn-grow-box{
+    background: var(--background);
+    color: var(#4741d7);
+    border: 2px solid var(--text-color);
+    padding: 16px 20px;
+    border-radius: 3px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.btn-grow-box:hover{
+    color: var(--accent);
+}
+
+.btn-grow-box::after{
+    content: '';
+    background: var(--primary-color);
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    border-radius: 50%;
+    left: -50%;
+    right: -50%;
+    top: -150%;
+    bottom: -150%;
+    transform: scale(0, 0);
+    transition: all 0.4s ease;
+}
+
+.btn-grow-box:hover::after{
+    transition: all 0.6s ease-out;
+    transform: scale(1, 1);
+}
+
+/**************todolist*********************/
+.todolist{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: 10px;
+    height: auto;
+}
+
+.add-task, .pending-tasks, .task-list, .deleted-tasks{
+    padding: 3px;
+    height: 100%;
+    border-radius: 10px;    
+}
+
+.todolist li {
+    list-style: none;   
+}
+
+.todolist button{
+    font-size: 1.1rem;
+    margin: 2px;
+    
+}
+
+.todolist .add-task{
+    background-color: #4641d7bb;    
+}
+
+.todolist .task-list{
+    background-color: #a3ff57c4;    
+}
+
+.todolist .pending-tasks{
+    background-color: #ff5f57b0;    
+}
+
+.todolist .deleted-tasks{
+    background-color: #5762ffc2;    
+}
+
+.add-task input, .pending-tasks ul, .task-list ul, .deleted-tasks ul{
+    text-align: start;
+    padding: 5px;
+}
+
+/******************user Info**********/
+.user-info{
+    font-size: 2rem;
+}
+
+/*******************login info*********/
+.login{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: 10px;
+    height: auto;
+}
+.login-form{
+    font-size: 1.5rem; 
+    text-align: center;           
+}
+
+.login-form label, input{
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+    margin-bottom: 15px;
+    
+    
+}
+
+.login-form input{
+    font-size: 1.2rem;
+    background-color: var(--primary-color);
+}
+
+/*******************Register*************/
+.register-form{
+    font-size: 1.5rem;                
+}
+
+#registerForm {
+    text-align: end;
+}
+
+#registerFrom button{
+    margin: 100px;
+}
+
+
+
+
+/**********Footer*****************/
+footer{ 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));             
+    background-color: var(--primary-color);
+    color: var(--text-color2);        
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    padding: 5px;
+    width: 100%;
+    height: auto;    
+    margin-top: 10px;
+    
+}  
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / -1;
+}
+
+#flag {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#flag img {
+    width: 50px;
+    height: auto;
+    border-radius: 50px 50px 10px 10px;
+}
+
+.lastModified {
+    grid-column: 1 / -1;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+@media (max-width: 449px){
+/**********Menu hamburguer*******************/
+
+    .menu-toggle button{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        width: 3rem;
+        height: 3rem;
+        background-color: transparent;
+        gap: .65rem;
+        transform-origin: left;
+        border: 0;
+        
+    }
+
+    .menu-toggle button > div{
+        background-color: var(--text-color2);
+        height: 2px;
+        width: 90%;
+        border-radius: 4px;
+        transition: all .5s;
+        transform-origin: left;
+        
+    }
+
+    .menu-toggle button:hover div:first-child{        
+        transform: rotate(45deg);
+    }
+
+    .menu-toggle button:hover div:nth-child(2){
+        opacity: 0;
+    }
+
+    .menu-toggle button:hover div:last-child{        
+        transform: rotate(-45deg);
+    }
+
+    .menu{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: var(--main-color);
+        width: 30%;
+        
+    }
+
+    .menu li{
+        list-style: none;  
+        padding: 5px;      
+    }
+
+    .menu li a{
+        color: var(--text-color2);
+        font-size: 1.25rem;
+    }
+
+    .menu-toggle .toggle{
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .menu.show{
+        display: flex;
+    }
+}
+
+
+
+
