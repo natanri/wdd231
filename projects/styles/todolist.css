@@ -27,6 +27,7 @@ header{
     background-color: var(--primary-color);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    border-radius: 10px 10px 0 0;
 }
 
 .top-page img{
@@ -73,6 +74,9 @@ nav li a:hover{
     color: var(--accent);
 }
 
+.menu-toggle button{
+    display: none;
+}
 
 /*************Intro***********************/
 .intro{
@@ -89,14 +93,14 @@ nav li a:hover{
 
 }
 
-/***************************************/
+/****************Main***********************/
 
 .home, .login, .todolist, .profile, .register{  
     display: flex;
     justify-content: center;
     align-items: center;  
     text-align: center;
-    border: 1px solid var(--secondary-color);
+    border: 1px solid var(--secondary-color);    
     width: 50%;
     margin-left: 25%;
     margin-right: 25%;
@@ -114,7 +118,7 @@ nav li a:hover{
 
 .btn-grow-box{
     background: var(--background);
-    color: var(#4741d7);
+    color: #4741d7;
     border: 2px solid var(--text-color);
     padding: 16px 20px;
     border-radius: 3px;
@@ -225,6 +229,10 @@ nav li a:hover{
 }
 
 /*******************Register*************/
+.register{
+    height: auto;
+}
+
 .register-form{
     font-size: 1.5rem;                
 }
@@ -241,9 +249,7 @@ nav li a:hover{
 
 
 /**********Footer*****************/
-footer{ 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));             
+footer{               
     background-color: var(--primary-color);
     color: var(--text-color2);        
     text-align: center;
@@ -256,22 +262,30 @@ footer{
 }  
 
 .footer-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 100px), 1fr));   
+    justify-content: center; 
+    gap: 1px;   
+}
+
+.footer-content .author{
     grid-column: 1 / -1;
 }
 
-#flag {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.footer-content #flag{
+    grid-row: 2;
+    grid-column: 1 / -1;
+    
 }
 
 #flag img {
     width: 50px;
     height: auto;
     border-radius: 50px 50px 10px 10px;
+}
+
+.footer-content #flag h4{
+    margin: 3px;
 }
 
 .lastModified {
@@ -282,76 +296,87 @@ footer{
     padding: 5px;
 }
 
-@media (max-width: 449px){
-/**********Menu hamburguer*******************/
 
+
+@media (max-width: 450px){
+/**********Menu hamburguer*******************/
     .menu-toggle button{
-        margin-top: 10px;
         display: flex;
         flex-direction: column;
         width: 3rem;
         height: 3rem;
-        background-color: transparent;
-        gap: .65rem;
-        transform-origin: left;
         border: 0;
-        
+        background-color: transparent;  
+        gap: .65rem;      
+        cursor: pointer;
     }
-
+    
     .menu-toggle button > div{
-        background-color: var(--text-color2);
+        background-color: #333;
         height: 2px;
         width: 90%;
-        border-radius: 4px;
+        border-radius: 5px;
         transition: all .5s;
         transform-origin: left;
-        
     }
 
-    .menu-toggle button:hover div:first-child{        
+    #toggleButton:hover div:first-child{
         transform: rotate(45deg);
     }
 
-    .menu-toggle button:hover div:nth-child(2){
+    #toggleButton:hover div:nth-child(2){
         opacity: 0;
     }
 
-    .menu-toggle button:hover div:last-child{        
+    #toggleButton:hover div:last-child{
         transform: rotate(-45deg);
     }
-
-    .menu{
+    
+    .menu-bar{
         display: none;
         flex-direction: column;
+        border-radius: 3px;
+        top: 150px;
+        right: 8px;
         position: absolute;
-        top: 60px;
-        right: 10px;
-        background-color: var(--main-color);
-        width: 30%;
+        background-color: var(--secondary-color);
+        width: 30%;  
+        justify-content:right; 
+        padding: 0;     
+    }
+
+    .menu-bar li{
+        font-size: 1.8rem;
         
     }
 
-    .menu li{
-        list-style: none;  
-        padding: 5px;      
+    .menu-bar li a{
+        color: var(--accent);        
     }
 
-    .menu li a{
-        color: var(--text-color2);
-        font-size: 1.25rem;
+    .menu-bar li a:hover{
+       color: var(--primary-color);
     }
 
-    .menu-toggle .toggle{
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
+    #menu-bar.show{
+        display: flex;        
     }
 
-    .menu.show{
-        display: flex;
+    .menu-bar.show a{
+        font-size: 1.5rem;
     }
+
+    /**************Main ******************/
+    .home, .todolist, .login, .register{
+        width: 100%;
+        margin: 0;
+        padding: 5px;
+        margin-top: 10px;
+    }
+
+    #registerForm {
+        text-align: end;
+        margin-right: 10%;        
+    }   
+
 }
-
-
-
-
