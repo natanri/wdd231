@@ -367,7 +367,7 @@ footer{
     }
 
     /**************Main ******************/
-    .home, .todolist, .login, .register{
+    .home, .todolist, .login, .register, .profile{
         width: 100%;
         margin: 0;
         padding: 5px;
